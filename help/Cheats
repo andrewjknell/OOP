@@ -1,0 +1,72 @@
+
+Each section is not necessarily in order, but please keep an eye out for these to be able to be comfortable with the test. I tried to group these with the order you guys are exposed to it, but still skim through and mark the ones you see on your current section -- easiest thing is to get through everything asap and review with this.
+Good luck!
+
+--Java--
+Know the differences between primitive and object types (main concept is Object types allow null values)
+Know the differences of arr[] vs. ArrayList
+Get comfortable with ArrayList (this is what you guys are used to)
+For ArrayLists, make sure you know what goes between the <> and what it’s for.
+For string comparison make sure you use .equals() and figure out why
+Know what type casting is and how to use it
+Know what type Long is (it will be used for id later)
+
+--OOP--
+Get comfortable understanding how to create attributes
+Know what getters and setters are and how they work -- generating them later is automated
+Know the difference between public and private and how to access private variables with getters/setters
+Know what a constructor looks like and how to build it -- later you will see the use of a blank one
+
+--Java on the Web--
+Get through this asap (it’s going to be replaced with what you learn in Spring. Don’t get hung up here)
+Learn what Session is, how to use it, and know what type you get from retrieving it
+Remember you need to type cast what you get from session -- figure out why
+
+--Spring--
+Know how to generate getters and setters automatically
+Know the differences between building forms with JSTL and regular html forms you are used to.
+Know what @RequestParam is for and how to use it (it should only be for regular html forms)
+Know how to use @PathVariable for id specific routes
+Know what @Valid does, where to place it, and how it triggers your models
+*BindingResult result should go next to where you place @Valid @ModelAttribute(‘zzzz’) Type Variable, BindingResult result
+Figure out what Model model is and how it works with jsp files. (model.addAttribute(‘key’, value))
+<c:out> is not necessary. You can just shortcut it with ${myvar} and it will stil display.
+Know how to do for loops and if statements in jsp.
+Error handling -- this will be different based on if you use jstl or regular forms. Know how to do both. If you notice, you will see some of them requiring a render on a post (i dont like that.)
+
+Database
+Know how to write OneToOne, OneToMany, ManyToMany and how they work in terms of oop.
+I highly recommend for ManyToMany to use the two table version and NOT the three table version (less work same result.)
+When you get to ManyToMany on the platform, it will show you to make Product model file first. DO NOT DO THIS AND AUTO IMPORT IT WILL BRING A RESERVED IMPORT THAT WILL CAUSE IT TO NOT RUN.
+Just simply do the category model first and then make the product model and then it is safe to auto import. (:
+Make sure you do not use _ inside of your model field variable names. It will screw up a lot of stuff cause it will conflict with the way mySQL will be passed the information from your models. (e.g. firstName is ok first_name is not ok).
+
+Be comfortable knowing how to create packages (they are basically folders with some nice importing features)
+Be very comfortable making Models -- these are your tables in you database. I highly recommend you always do models first when you do assignments / belts.
+Repositories -- not much to worry about here, but figure out what is natively in CrudRepository and what you can use from it. You can also import it directly into your controller file like you will your service file.
+Service files -- Figure out what Optional type is and what it is used for (error catching, null types…)
+Login and Registration -- is given on platform. -- figure out how to put them on the same page! (They are separated for reason on the platform but the belt will require them to be on the same page).
+
+--Workflow recommendations--
+POM file -- I keep a list of dependencies in a file to copy paste from. Don’t need to use the manual adding GUI that he uses. You can paste the xml code and it will read properly.
+Application.properties -- copy paste. Be sure to change schema name if you need to!
+
+Models first! -- any change to a model please drop your schema and recreate it (always test with fresh data)
+Repositories and Services go hand in hand after the models.
+
+After those Models, Repositories, and Services are finished, go one by one on Controller routes and jsps
+E.g. Controller route for ‘/’ - jsp for ‘/’ and so on.
+You will see @RequestMapping on the platform
+There is also
+@PostMapping
+@PutMapping
+To save some time.
+
+**some other bugs to watch out for**
+If you see Locale.Category in your imports remove it.
+Figure out which Date import to use for sql and if you need to convert it before creating something
+java.util will contain a lot of things you need.
+Sometimes you will see errors and red marks on your files. Make sure you save before attempting to debug sometimes it cannot detect that you have made the necessary changes.
+Semicolons!
+Make sure types match, make sure function types match return types
+
